@@ -22,6 +22,10 @@
 #define Paste  LC(V)
 #define Redo   LC(Y)
 
+&lt {
+    tapping-term-ms = <200>; // This is the value already set by default
+};
+
 / {
     combos {
         compatible = "zmk,combos";
