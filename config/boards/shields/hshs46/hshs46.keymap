@@ -124,7 +124,7 @@
         sym_layer {
             display-name = "num simb";
             bindings = <
-&trans     &kp  ASTRK    &kp  KP_N7    &kp  KP_N8    &kp  KP_N9   &kp  SLASH                                                                &kp  LBKT     &kp  RBKT      &kp  ASTRK     &kp  LPAR     &Passpc       &Passfirma
+&trans     &kp  ASTRK    &kp  KP_N7    &kp  KP_N8    &kp  KP_N9   &kp  SLASH                                                                &kp  LBKT     &kp  RBKT      &kp  LBRC     &kp  RBRC     &Passpc       &Passfirma
 &trans     &kp  PLUS     &kp  KP_N4    &kp  KP_N5    &kp  KP_N6   &kp  MINUS                                                                &kp  BSLH     &kp  AT        &kp  F4        &kp  DLLR     &kp  POUND    &kp AMPS
 &trans     &kp  PRCNT    &kp  KP_N1    &kp  KP_N2    &kp  KP_N3   &kp  UNDER     &trans                                         &trans      &kp  C_MUTE   &kp  C_VOL_DN  &kp  C_VOL_UP  &kp  C_PP     &kp CLCK      &kp PSCRN
                                                      &kp COMMA    &kp KP_N0      &kp ENTER    &trans               &trans       &trans      &trans        &trans
