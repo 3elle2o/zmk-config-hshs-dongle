@@ -12,5 +12,8 @@ manifest:
     - name: prospector-zmk-module                 # <--- and these
       remote: carrefinho                          # <---
       revision: main                              # <---
+    - name: zmk-auto-layer
+      remote: urob
+      revision: v0.3 # set to same version as zmk above      
   self:
     path: config
