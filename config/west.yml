@@ -11,7 +11,7 @@ manifest:
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    - name: prospector-zmk-module                 # <--- and these
+    - name: zmk-dongle-screen                 # <--- and these
       remote: janpfischer
       revision: main                            # <---
     - name: zmk-auto-layer
