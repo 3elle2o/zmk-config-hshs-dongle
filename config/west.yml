@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: carrefinho                            # <--- add this
-      url-base: https://github.com/carrefinho     # <--- and this
+    - name: janpfischer
+      url-base: https://github.com/janpfischer
     - name: urob
       url-base: https://github.com/urob
   projects:
@@ -12,8 +12,8 @@ manifest:
       revision: v0.3
       import: app/west.yml
     - name: prospector-zmk-module                 # <--- and these
-      remote: carrefinho                          # <---
-      revision: main                              # <---
+      remote: janpfischer
+      revision: main                            # <---
     - name: zmk-auto-layer
       remote: urob
       revision: v0.3 # set to same version as zmk above      
