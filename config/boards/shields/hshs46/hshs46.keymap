@@ -48,7 +48,18 @@
     mau_word: mau_word {
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
-        continue-list = <LSCRL_UP MOVE_LEFT MOVE_UP MOVE_DOWN MOVE_RIGHT SCRL_DOWN RCLK MCLK LCLK>;
+      continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
+      ignore-modifiers;
+    };
+  };
+};
+
+/ {
+  behaviors {
+    mau_word: mau_word {
+      compatible = "zmk,behavior-auto-layer";
+      #binding-cells = <1>;
+        continue-list = <SCRL_UP MOVE_LEFT MOVE_UP MOVE_DOWN MOVE_RIGHT SCRL_DOWN RCLK MCLK LCLK>;
       ignore-modifiers;
     };
   };
