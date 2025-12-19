@@ -16,6 +16,7 @@
 #define QWERTY_L 0
 #define NAV_L    1
 #define SYM_L    2
+#define MAU_L    3
 
 #define Undo   LC(Z)
 #define Cut    LC(X)
@@ -28,8 +29,18 @@
     nav_word: nav_word {
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
-        continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP SCRL_UP MOVE_LEFT MOVE_UP MOVE_DOWN MOVE_RIGHT SCRL_DOWN RCLK MCLK LCLK>;
+        continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
       ignore-modifiers;
+    };
+  };
+};
+
+/ {
+  behaviors {
+    mau_word: mau_word {
+      compatible = "zmk,behavior-auto-layer";
+      #binding-cells = <1>;
+        continue-list = <LSCRL_UP MOVE_LEFT MOVE_UP MOVE_DOWN MOVE_RIGHT SCRL_DOWN RCLK MCLK LCLK>;
     };
   };
 };
@@ -48,18 +59,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sl  SYM_L>, < &tog SYM_L>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sl  NAV_L>, < &tog NAV_L>;
+            bindings = <&kp Y>, < &mau_word 3>;
         };
     };
 };
@@ -132,7 +132,7 @@
         Base {
             display-name = "Base";
             bindings = <
-&kp  LPAR     &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                                   &kp  Y        &kp  U        &kp  I        &kp  O        &kp  COLON    &kp  SEMI
+&kp  LPAR     &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                                   &td0        &kp  U        &kp  I        &kp  O        &kp  COLON    &kp  SEMI
 &kp  RPAR     &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                                   &kp  H        &kp  J        &kp  K        &kp  L        &kp  P        &kp  DOUBLE_QUOTES
 &kp  EQUAL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  ESC                                                     &kp Undo      &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  EXCL     &kp  QMARK
                                                         &kp  ENTER    &sk  LCTRL   &sk  LSHIFT   &num_word 2                       &nav_word 1   &kp APOSTROPHE  &kp  LGUI     &kp  LALT
@@ -142,12 +142,12 @@
        };
 
         nav_layer {
-            display-name = "muovi";
+            display-name = "muovi fun";
             bindings = <
-&none      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                     &kp   F6        &kp  F7         &kp   F8       &kp   F9          &kp  F10         &kp RCTRL
-&none      &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp  LSHFT    &none                                                                       &kp   PG_UP     &kp  LEFT       &kp   UP       &kp   DOWN        &kp  RIGHT       &kp PG_DN
-&none      &none         &mkp  RCLK     &mkp MCLK      &mkp LCLK      &none         &trans                                             &trans     &msc   SCRL_UP   &mmv  MOVE_LEFT  &mmv   MOVE_UP  &mmv   MOVE_DOWN   &mmv  MOVE_RIGHT  &msc SCRL_DOWN
-                                                    &trans        &trans        &trans        &trans                     &trans     &trans    &trans        &trans
+&trans      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                     &kp   F6        &kp  F7         &kp   F8       &kp   F9          &kp  F10         &trans
+&trans      &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp  LSHFT    &trans                                                                      &kp   PG_UP     &kp  LEFT       &kp   UP       &kp  RIGHT       &kp PG_DN         &trans
+&trans      &none         &trans        &trans        &trans        &trans        &trans                                             &trans     &trans          &trans          &trans         &trans            &trans           &trans
+                                                      &trans        &trans        &trans        &trans                    &trans     &kp DOWN   &trans          &trans
            >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -156,13 +156,27 @@
         sym_layer {
             display-name = "num simb";
             bindings = <
-&trans     &kp  ASTRK    &kp  KP_N7    &kp  KP_N8    &kp  KP_N9   &kp  SLASH                                                                &kp  LBKT     &kp  RBKT      &kp  LBRC     &kp  RBRC     &Passpc       &Passfirma
+&trans     &kp  ASTRK    &kp  KP_N7    &kp  KP_N8    &kp  KP_N9   &kp  SLASH                                                                &kp  LBKT     &kp  RBKT      &kp  LBRC     &kp  RBRC      &Passpc       &Passfirma
 &trans     &kp  PLUS     &kp  KP_N4    &kp  KP_N5    &kp  KP_N6   &kp  MINUS                                                                &kp  BSLH     &kp  AT        &kp  F4        &kp  DLLR     &kp  POUND    &kp AMPS
 &trans     &kp  PRCNT    &kp  KP_N1    &kp  KP_N2    &kp  KP_N3   &kp  UNDER     &trans                                         &trans      &kp  C_MUTE   &kp  C_VOL_DN  &kp  C_VOL_UP  &kp  C_PP     &kp CLCK      &kp PSCRN
-                                                     &kp COMMA    &kp KP_N0      &kp ENTER   trans                   &trans       &trans      &trans        &trans
+                                                     &kp COMMA    &kp KP_N0      &kp ENTER   trans                   &trans     &trans      &trans        &trans
            >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
+
+        mau_layer {
+            display-name = "mouse";
+            bindings = < 
+&trans      &trans     &trans         &trans         &trans        &trans                                                              &trans           &trans           &trans          &trans            &trans             &trans 
+&trans      &trans     &mkp  RCLK     &mkp MCLK      &mkp LCLK     &trans                                                              &msc   SCRL_UP   &mmv  MOVE_LEFT  &mmv   MOVE_UP  &mmv  MOVE_RIGHT  &msc SCRL_DOWN     &trans
+&trans      &trans     &trans         &trans         &trans        &trans      &trans                               &trans             &trans           &trans           &trans          &trans            &trans             &trans            
+                                                     &trans        &trans      &trans    &trans          &trans     &mmv   MOVE_DOWN   &trans        &trans
+           >;
+
+                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+       };
+
+
     };
 }; 
