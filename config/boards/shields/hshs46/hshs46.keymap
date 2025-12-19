@@ -24,6 +24,14 @@
 #define Paste  LC(V)
 #define Redo   LC(Y)
 
+&num_word {
+  continue-list = <LPAR RPAR EQUAL SLASH MINUS ASTRK PLUS PRCNT COMMA>;
+};
+
+&mt {
+    tapping-term-ms = <130>; // This is the value already set by default
+};
+
 / {
   behaviors {
     nav_word: nav_word {
@@ -43,14 +51,6 @@
         continue-list = <LSCRL_UP MOVE_LEFT MOVE_UP MOVE_DOWN MOVE_RIGHT SCRL_DOWN RCLK MCLK LCLK>;
     };
   };
-};
-
-&num_word {
-  continue-list = <LPAR RPAR EQUAL SLASH MINUS ASTRK PLUS PRCNT COMMA>;
-};
-
-&mt {
-    tapping-term-ms = <130>; // This is the value already set by default
 };
 
 / {
