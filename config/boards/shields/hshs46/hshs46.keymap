@@ -49,6 +49,7 @@
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <2>;
         continue-list = <LSCRL_UP MOVE_LEFT MOVE_UP MOVE_DOWN MOVE_RIGHT SCRL_DOWN RCLK MCLK LCLK>;
+      ignore-modifiers;
     };
   };
 };
