@@ -66,6 +66,17 @@
 };
 
 / {
+    behaviors {
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp Y>, <&mau_word>;
+        };
+    };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
         layers = <0>;
@@ -102,13 +113,13 @@
         combo_shift {
             timeout-ms = <50>;
             key-positions = <7 19>;
-            bindings = <&kp LSHIFT>;
+            bindings = <&sk LSHIFT>;
         };
 
         combo_accent {
             timeout-ms = <50>;
             key-positions = <8 20>;
-            bindings = <&kp APOSTROPHE>;
+            bindings = <&sk APOSTROPHE>;
         };
 
     };
@@ -139,7 +150,7 @@
         Base {
             display-name = "Base";
             bindings = <
-&kp  LPAR     &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                                   &td0          &kp  U        &kp  I        &kp  O        &kp  COLON    &kp  SEMI
+&kp  LPAR     &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                                   &td1          &kp  U        &kp  I        &kp  O        &kp  COLON    &kp  SEMI
 &kp  RPAR     &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                                   &kp  H        &kp  J        &kp  K        &kp  L        &kp  P        &kp  DOUBLE_QUOTES
 &kp  EQUAL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  ESC                                                     &kp Undo      &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  EXCL     &kp  QMARK
                                                         &kp  ENTER    &sk  LCTRL   &mau_word 3   &num_word 2                       &nav_word 1   &caps_word    &kp  LGUI     &kp  LALT
