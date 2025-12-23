@@ -12,8 +12,7 @@
 #include <dt-bindings/zmk/behaviors.h>
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <behaviors.dtsi>
+#include "ansi_italian_remapping.h"
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
@@ -43,6 +42,7 @@
 #define NAV_L    1
 #define SYM_L    2
 #define MAU_L    3
+#define ACC_L    4
 
 #define Undo   LC(Z)
 #define Cut    LC(X)
@@ -81,6 +81,17 @@
 };
 
 / {
+  behaviors {
+    acc_word: acc_word {
+      compatible = "zmk,behavior-auto-layer";
+      #binding-cells = <1>;
+        continue-list = <IT_EGRV IT_AGRV IT_UGRV IT_IGRV IT_OGRV>;
+      ignore-modifiers;
+    };
+  };
+};
+
+/ {
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -98,6 +109,17 @@
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&kp Y>, <&mau_word 3>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp J>, <&acc_word 4>;
         };
     };
 };
@@ -216,6 +238,18 @@
 &trans      &trans     &mkp  RCLK     &mkp MCLK      &mkp LCLK     &trans                                                              &msc   SCRL_UP   &mmv  MOVE_LEFT  &mmv   MOVE_UP  &mmv  MOVE_RIGHT  &msc SCRL_DOWN     &trans
 &trans      &trans     &trans         &trans         &trans        &trans      &trans                               &trans             &trans           &trans           &trans          &trans            &trans             &trans            
                                                      &trans        &trans      &trans    &trans          &trans     &mmv   MOVE_DOWN   &trans        &trans
+           >;
+
+                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+       };
+
+        acc_layer {
+            display-name = "accent";
+            bindings = < 
+&trans        &trans       &trans          &kp IT_EGRV    &trans        &trans                                                              &trans        &kp IT_UGRV      &kp IT_IGRV     &kp IT_OGRV       &trans             &trans 
+&trans        &kp IT_AGRV  &trans          &trans         &trans        &trans                                                              &trans        &trans           &trans          &trans            &trans             &trans
+&trans        &trans       &trans          &trans         &trans        &trans      &trans                               &trans             &trans        &trans           &trans          &trans            &trans             &trans            
+                                                          &trans        &trans      &trans      &trans          &trans   &trans             &trans        &trans
            >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
