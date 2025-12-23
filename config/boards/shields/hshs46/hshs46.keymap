@@ -201,7 +201,7 @@
 &kp  LPAR     &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                                   &td1          &kp  U        &kp  I        &kp  O        &kp  COLON    &kp  SEMI
 &kp  RPAR     &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                                   &kp  H        &td2          &kp  K        &kp  L        &kp  P        &kp  DOUBLE_QUOTES
 &kp  EQUAL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  ESC                                                     &kp Undo      &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  EXCL     &kp  QMARK
-                                                        &sk  LSHIFT   &sk  LCTRL    &kp  ENTER   &num_word 2                       &nav_word 1   &caps_word    &kp  LGUI     &kp  LALT
+                                                        &sk  LSHIFT   &sk  LCTRL    &acc_word 4   &num_word 2                      &nav_word 1   &caps_word    &kp  LGUI     &kp  LALT
            >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
