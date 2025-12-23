@@ -14,30 +14,6 @@
 #include <behaviors/num_word.dtsi>
 #include "ansi_italian_remapping.h"
 
-#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
-
-/ {
-    behaviors {
-        as: auto_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <135>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-        default_layer {
-            bindings = <
-                AS(Q) AS(W) AS(E) AS(R) AS(T) AS(Y) // Autoshift applied for QWERTY keys
-            >;
-        };
-    };
-};
-
 #define QWERTY_L 0
 #define NAV_L    1
 #define SYM_L    2
@@ -108,7 +84,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp Y>, <&mau_word 3>;
+            bindings = <&kp K>, <&mau_word 3>;
         };
     };
 };
@@ -160,13 +136,13 @@
 
         combo_shift {
             timeout-ms = <50>;
-            key-positions = <7 19>;
+            key-positions = <18 19>;
             bindings = <&sk LSHIFT>;
         };
 
         combo_accent {
             timeout-ms = <50>;
-            key-positions = <8 20>;
+            key-positions = <32 33>;
             bindings = <&sk APOSTROPHE>;
         };
 
@@ -198,8 +174,8 @@
         Base {
             display-name = "Base";
             bindings = <
-&kp  LPAR     &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                                   &td1          &kp  U        &kp  I        &kp  O        &kp  COLON    &kp  SEMI
-&kp  RPAR     &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                                   &kp  H        &td2          &kp  K        &kp  L        &kp  P        &kp  DOUBLE_QUOTES
+&kp  LPAR     &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                                   &kp  Y          &kp  U        &kp  I        &kp  O        &kp  COLON    &kp  SEMI
+&kp  RPAR     &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                                   &kp  H        &td2          &td1        &kp  L        &kp  P        &kp  DOUBLE_QUOTES
 &kp  EQUAL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  ESC                                                     &kp Undo      &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  EXCL     &kp  QMARK
                                                         &sk  LSHIFT   &sk  LCTRL    &acc_word 4   &num_word 2                      &nav_word 1   &caps_word    &kp  LGUI     &kp  LALT
            >;
