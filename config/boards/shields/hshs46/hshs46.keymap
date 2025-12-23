@@ -61,7 +61,7 @@
     acc_word: acc_word {
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
-        continue-list = <IT_EGRV IT_AGRV IT_UGRV IT_IGRV IT_OGRV>;
+        continue-list = <EAC AAC IAC OAC UAC>;
       ignore-modifiers;
     };
   };
@@ -137,6 +137,40 @@
             bindings = <&kp N7 &kp N3 &kp N0 &kp N0 &kp N2 &kp N0 &kp N9 &kp N9>;
             label = "PASSFIRMA";
         };
+        Eac: Eac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp E>;
+            label = "EAC";
+        };
+
+        Aac: Aac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp A>;
+            label = "AAC";
+        };
+
+        Iac: Iac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp I>;
+            label = "IAC";
+        };
+
+        Oac: Oac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp O>;
+            label = "OAC";
+        };
+
+        Uac: Uac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp U>;
+            label = "UAC";
+        };
     };
 };
 
@@ -195,8 +229,8 @@
         acc_layer {
             display-name = "accent";
             bindings = < 
-&trans        &trans       &trans          &kp IT_EGRV    &trans        &trans                                                              &trans        &kp IT_UGRV      &kp IT_IGRV     &kp IT_OGRV       &trans             &trans 
-&trans        &kp IT_AGRV  &trans          &trans         &trans        &trans                                                              &trans        &trans           &trans          &trans            &trans             &trans
+&trans        &trans       &trans          &EAC    &trans        &trans                                                              &trans        &UAC             &IAC            &OAC              &trans             &trans     
+&trans        &AAC  &trans          &trans         &trans        &trans                                                              &trans        &trans           &trans          &trans            &trans             &trans
 &trans        &trans       &trans          &trans         &trans        &trans      &trans                               &trans             &trans        &trans           &trans          &trans            &trans             &trans            
                                                           &trans        &trans      &trans      &trans          &trans   &trans             &trans        &trans
            >;
