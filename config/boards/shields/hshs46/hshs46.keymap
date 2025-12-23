@@ -68,39 +68,6 @@
 };
 
 / {
-    behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp COMMA>, < &kp DOT>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp K>, <&mau_word 3>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp J>, <&acc_word 4>;
-        };
-    };
-};
-
-/ {
     combos {
         compatible = "zmk,combos";
         layers = <0>;
@@ -144,6 +111,12 @@
             timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <&sk APOSTROPHE>;
+        };
+
+        combo_mou {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&mau_word 3>;
         };
 
     };
