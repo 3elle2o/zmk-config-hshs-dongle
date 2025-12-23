@@ -16,23 +16,6 @@
 
 #pragma once
 
-#define IT_EGRV LEFT_BRACKET
-#define IT_AGRV SINGLE_QUOTE
-#define IT_UGRV BACKSLASH
-#define IT_IGRV EQUAL
-#define IT_OGRV SEMICOLON
-#define IT_EURO LA(E)
-#define IT_EXCL LS(N1)
-#define IT_AT   LA(SEMICOLON)
-#define IT_SHRP LA(SINGLE_QUOTE)
-#define IT_DOLL LS(N4)
-#define IT_PERC LS(N5)
-#define IT_POWE LS(EQUAL)
-#define IT_ECOM LS(N6)
-#define IT_STAR LS(RIGHT_BRACKET)
-#define IT_LPAR LS(N8)
-#define IT_RPAR LS(N9)
-#define IT_EQAL LS(N0)
 #define IT_MINU SLASH
 #define IT_PLUS RIGHT_BRACKET
 #define IT_UNDS LS(SLASH)
