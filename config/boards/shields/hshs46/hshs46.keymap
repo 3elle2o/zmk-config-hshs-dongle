@@ -57,17 +57,6 @@
 };
 
 / {
-  behaviors {
-    acc_word: acc_word {
-      compatible = "zmk,behavior-auto-layer";
-      #binding-cells = <1>;
-        continue-list = <EAC AAC IAC OAC UAC>;
-      ignore-modifiers;
-    };
-  };
-};
-
-/ {
     combos {
         compatible = "zmk,combos";
         layers = <0>;
@@ -172,6 +161,17 @@
             label = "UAC";
         };
     };
+};
+
+/ {
+  behaviors {
+    acc_word: acc_word {
+      compatible = "zmk,behavior-auto-layer";
+      #binding-cells = <1>;
+        continue-list = <EAC AAC IAC OAC UAC>;
+      ignore-modifiers;
+    };
+  };
 };
 
 / {
