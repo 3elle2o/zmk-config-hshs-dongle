@@ -169,8 +169,8 @@
         Base {
             display-name = "Base";
             bindings = <
-&kp  LPAR     &kp  Q        &kp  W        &lt  E EAC        &kp  R        &kp  T                                                                                   &kp  Y        &lt U UAC      &lt I IAC      &lt  O OAC       &kp  COLON    &kp  SEMI
-&kp  RPAR     &lt  A AAC       &kp  S        &kp  D        &kp  F        &kp  G                                                                                   &kp  H        &kp J         &kp K        &kp  L        &kp  P        &kp  DOUBLE_QUOTES
+&kp  LPAR     &kp  Q        &kp  W        &mt E EAC        &kp  R        &kp  T                                                                                   &kp  Y        &mt U UAC      &mt I IAC      &mt  O OAC       &kp  COLON    &kp  SEMI
+&kp  RPAR     &mt  A AAC       &kp  S        &kp  D        &kp  F        &kp  G                                                                                   &kp  H        &kp J         &kp K        &kp  L        &kp  P        &kp  DOUBLE_QUOTES
 &kp  EQUAL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  ESC                                                     &kp Undo      &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  EXCL     &kp  QMARK
                                                         &sk  LSHIFT   &sk  LCTRL    &acc_word 4   &num_word 2                      &nav_word 1   &caps_word    &kp  LGUI     &kp  LALT
            >;
