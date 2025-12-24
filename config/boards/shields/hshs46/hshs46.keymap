@@ -34,6 +34,59 @@
 };
 
 / {
+    macros {
+        Passpc: Passpc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N3 &kp N1 &kp N1>;
+            label = "PASSPC";
+        };
+
+        Passfirma: Passfirma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N7 &kp N3 &kp N0 &kp N0 &kp N2 &kp N0 &kp N9 &kp N9>;
+            label = "PASSFIRMA";
+        };
+
+        Eac: Eac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp E>;
+            label = "EAC";
+        };
+
+        Aac: Aac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp A>;
+            label = "AAC";
+        };
+
+        Iac: Iac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp I>;
+            label = "IAC";
+        };
+
+        Oac: Oac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp O>;
+            label = "OAC";
+        };
+
+        Uac: Uac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp U>;
+            label = "UAC";
+        };
+    };
+};
+
+/ {
   behaviors {
     nav_word: nav_word {
       compatible = "zmk,behavior-auto-layer";
@@ -50,6 +103,17 @@
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
         continue-list = <SCRL_UP MOVE_LEFT MOVE_UP MOVE_DOWN MOVE_RIGHT SCRL_DOWN RCLK MCLK LCLK>;
+      ignore-modifiers;
+    };
+  };
+};
+
+/ {
+  behaviors {
+    acc_word: acc_word {
+      compatible = "zmk,behavior-auto-layer";
+      #binding-cells = <1>;
+       continue-list = <EAC AAC IAC OAC UAC>;
       ignore-modifiers;
     };
   };
@@ -108,69 +172,6 @@
         };
 
     };
-};
-
-/ {
-    macros {
-        Passpc: Passpc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N0 &kp N3 &kp N1 &kp N1>;
-            label = "PASSPC";
-        };
-
-        Passfirma: Passfirma {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N7 &kp N3 &kp N0 &kp N0 &kp N2 &kp N0 &kp N9 &kp N9>;
-            label = "PASSFIRMA";
-        };
-
-        Eac: Eac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp E>;
-            label = "EAC";
-        };
-
-        Aac: Aac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp A>;
-            label = "AAC";
-        };
-
-        Iac: Iac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp I>;
-            label = "IAC";
-        };
-
-        Oac: Oac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp O>;
-            label = "OAC";
-        };
-
-        Uac: Uac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp U>;
-            label = "UAC";
-        };
-    };
-};
-
-/ {
-  behaviors {
-    acc_word: acc_word {
-      compatible = "zmk,behavior-auto-layer";
-      #binding-cells = <1>;
-      continue-list = <EAC AAC IAC OAC UAC>;
-    };
-  };
 };
 
 / {
