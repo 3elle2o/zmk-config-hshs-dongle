@@ -123,13 +123,6 @@
             key-positions = <16 17>;
             bindings = <&sk GRAVE>;
         };
-
-        combo_mou {
-            timeout-ms = <50>;
-            key-positions = <6 7>;
-            bindings = <&mau_word 3>;
-        };
-
     };
 };
 
@@ -143,7 +136,7 @@
 &kp  LPAR     &kp  Q        &kp  W        &kp E         &kp  R        &kp  T                                                                                   &kp  Y        &kp U       &kp I       &kp  O        &kp  COLON    &kp  SEMI
 &kp  RPAR     &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                                   &kp  H        &kp J         &kp K        &kp  L        &kp  P        &kp  DOUBLE_QUOTES
 &kp  EQUAL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  ESC                                                     &kp Undo      &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  EXCL     &kp  QMARK
-                                                        &sk  LSHIFT   &sk  LCTRL    &acc_word 4   &num_word 2                      &nav_word 1   &caps_word    &kp  LGUI     &kp  LALT
+                                                        &sk  LSHIFT   &sk  LCTRL    &mau_word 3   &num_word 2                      &nav_word 1   &caps_word    &kp  LGUI     &kp  LALT
            >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
