@@ -168,7 +168,7 @@
   behaviors {
     acc_word: acc_word {
       compatible = "zmk,behavior-auto-layer";
-      #binding-cells = <1>;
+      #binding-cells = <0>;
       continue-list = <EAC AAC IAC OAC UAC>;
     };
   };
