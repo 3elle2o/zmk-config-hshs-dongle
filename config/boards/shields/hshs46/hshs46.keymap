@@ -12,7 +12,6 @@
 #include <dt-bindings/zmk/behaviors.h>
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi>
-#include "ansi_italian_remapping.h"
 
 #define QWERTY_L 0
 #define NAV_L    1
@@ -168,7 +167,7 @@
   behaviors {
     acc_word: acc_word {
       compatible = "zmk,behavior-auto-layer";
-      #binding-cells = <0>;
+      #binding-cells = <1>;
       continue-list = <EAC AAC IAC OAC UAC>;
     };
   };
