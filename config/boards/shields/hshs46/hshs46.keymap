@@ -90,7 +90,7 @@
 
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <27 28>;
+            key-positions = <30 31>;
             bindings = <&kp TAB>;
         };
 
@@ -108,13 +108,13 @@
 
         combo_shift {
             timeout-ms = <50>;
-            key-positions = <18 19>;
+            key-positions = <27 28>;
             bindings = <&sk LSHIFT>;
         };
 
         combo_accent {
             timeout-ms = <50>;
-            key-positions = <32 33>;
+            key-positions = <18 19>;
             bindings = <&sk APOSTROPHE>;
         };
 
