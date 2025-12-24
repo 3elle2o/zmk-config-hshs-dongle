@@ -126,6 +126,7 @@
             bindings = <&kp N7 &kp N3 &kp N0 &kp N0 &kp N2 &kp N0 &kp N9 &kp N9>;
             label = "PASSFIRMA";
         };
+
         Eac: Eac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -169,7 +170,6 @@
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
       continue-list = <EAC AAC IAC OAC UAC>;
-      ignore-modifiers;
     };
   };
 };
