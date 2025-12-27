@@ -11,9 +11,6 @@
 #include <dt-bindings/zmk/behaviors.h>
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi>
-
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
-
 #include <dt-bindings/zmk/pointing.h>
 
 #define QWERTY_L 0
