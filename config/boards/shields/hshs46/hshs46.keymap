@@ -118,6 +118,20 @@
 };
 
 / {
+    macros {
+        laynav: laynav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &nav_word 1>
+                , <&macro_tap &kp J>
+                , <&macro_release &nav_word 1>
+                ;
+        };
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -125,7 +139,7 @@
             display-name = "Base";
             bindings = <
 &kp  LPAR     &kp  Q        &kp  W        &kp E         &kp  R        &kp  T                                                                                   &kp  Y        &kp U       &kp I       &kp  O        &kp  COLON    &kp  SEMI
-&kp  RPAR     &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                                   &kp  H        &kp J       &kp K   &kp  L        &kp  P        &kp  DOUBLE_QUOTES
+&kp  RPAR     &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                                   &kp  H        &laynav       &kp K   &kp  L        &kp  P        &kp  DOUBLE_QUOTES
 &kp  EQUAL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  ESC                                                     &kp Undo      &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  EXCL     &kp  QMARK
                                                         &kp ENTER   &sk  LCTRL    &num_word 2 &sk  LSHIFT                      &kp APOSTROPHE  &caps_word    &kp TAB       &alt_tab   
            >;
