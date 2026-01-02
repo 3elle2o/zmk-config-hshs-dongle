@@ -126,7 +126,7 @@
             bindings = <
 &kp C_VOL_UP  &kp Q     &kp  W    &kp E     &kp  R    &kp  T                                                                                                 &kp  Y      &kp U       &kp I       &kp  O        &mt SEMI  COLON    &kp  C_PP
 &kp C_VOL_DN  &kp  A    &kp  S    &kp  D    &kp  F    &kp  G                                                                                                 &kp  H      &mt LPAR J  &mt RPAR K  &kp  L        &kp  P             &kp  C_MUTE
-&kp LALT      &kp  Z    &kp  X    &kp  C    &kp  V    &kp  B        &kp  ESC                                                                     &kp Undo    &kp  N      &mt M       &mt  COMMA    &kp  DOT    &mt QMARK  EXCL    &kp  PSCRN
+&kp LALT      &kp  Z    &kp  X    &kp  C    &kp  V    &kp  B        &kp  ESC                                                                     &kp Undo    &kp  N      &kp M       &kp COMMA   &kp  DOT      &mt QMARK  EXCL    &kp  PSCRN
                                             &kp LGUI  &sk  LCTRL    &num_word 2   &sk  LSHIFT                      &mt DOUBLE_QUOTES APOSTROPHE  &caps_word  &kp TAB     &kp  EQUAL   
            >;
 
