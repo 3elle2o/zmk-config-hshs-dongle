@@ -80,7 +80,7 @@
     sym_word: sym_word {
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
-        continue-list = <LBKT RBKT LBRC RBRC Passpc Passfirma BSLH AT F4 DLLR POUND AMPERSAND>;
+        continue-list = <LBKT RBKT LBRC RBRC BSLH AT F4 DLLR POUND AMPERSAND>;
       ignore-modifiers;
     };
   };
