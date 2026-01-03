@@ -50,31 +50,6 @@
             bindings = <&kp N7 &kp N3 &kp N0 &kp N0 &kp N2 &kp N0 &kp N9 &kp N9>;
             label = "PASSFIRMA";
         };
-
-        tappp: tappp {
-            label = "tappp";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings =
-                <&macro_press &Passfirma>,
-                <&macro_tap &Passpc>;
-        };
-
-        sel1: sel1 {
-            label = "sel1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHIFT &kp LCTRL &kp LEFT>,
-        };
-
-        sel2: sel2 {
-            label = "sel2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHIFT &kp LCTRL &kp RIGTH>,
-        };
     };
 };
 
@@ -177,10 +152,10 @@
         Base {
             display-name = "Base";
             bindings = <
-&kp C_VOL_UP  &kp Q     &kp  W    &kp E     &kp  R    &kp  T                                                                                                                  &kp  Y      &kp U       &kp I       &kp  O        &mt SEMI  COLON    &kp  C_PP
-&kp C_VOL_DN  &kp  A    &kp  S    &kp  D    &kp  F    &kp  G                                                                                                                  &kp  H      &mt LPAR J  &mt RPAR K  &kp  L        &kp  P             &kp  C_MUTE
-&tappp        &kp  Z    &kp  X    &kp  C    &kp  V    &kp  B     &kp  ESC                                                                     &kp Undo                        &kp  N      &kp M       &kp COMMA   &kp  DOT      &mt QMARK  EXCL    &kp  PSCRN
-                                            &sel1     &kp LGUI   &sk  LSHIFT &sk  LCTRL                                               &kp TAB &mt DOUBLE_QUOTES APOSTROPHE    &kp LALT    &sel2    
+&kp C_VOL_UP  &kp Q     &kp  W    &kp E     &kp  R      &kp  T                                                                                                                  &kp  Y      &kp U       &kp I       &kp  O        &mt SEMI  COLON    &kp  C_PP
+&kp C_VOL_DN  &kp  A    &kp  S    &kp  D    &kp  F      &kp  G                                                                                                                  &kp  H      &mt LPAR J  &mt RPAR K  &kp  L        &kp  P             &kp  C_MUTE
+&kp C_AL_CALC &kp  Z    &kp  X    &kp  C    &kp  V      &kp  B     &kp  ESC                                                                     &kp Undo                        &kp  N      &kp M       &kp COMMA   &kp  DOT      &mt QMARK  EXCL    &kp  PSCRN
+                                            &Passfirma  &kp LGUI   &sk  LSHIFT &sk  LCTRL                                               &kp TAB &mt DOUBLE_QUOTES APOSTROPHE    &kp LALT    &Passpc    
            >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
