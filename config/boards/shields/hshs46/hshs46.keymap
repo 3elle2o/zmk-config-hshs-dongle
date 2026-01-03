@@ -76,9 +76,19 @@
 };
 
 / {
+  behaviors {
+    sym_word: sym_word {
+      compatible = "zmk,behavior-auto-layer";
+      #binding-cells = <1>;
+        continue-list = <LBKT RBKT LBRC RBRC Passpc Passfirma BSLH AT F4 DLLR POUND AMPERSAND>;
+      ignore-modifiers;
+    };
+  };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
-        layers = <0>;
         combo_backspace {
             timeout-ms = <50>;
             key-positions = <19 20>;
@@ -89,6 +99,12 @@
             timeout-ms = <50>;
             key-positions = <15 16>;
             bindings = <&kp SPACE>;
+        };
+
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp TAB>;
         };
 
         combo_enter {
@@ -103,16 +119,28 @@
             bindings = <&kp DEL>;
         };
 
-        combo_nav {
+        combo_mau {
             timeout-ms = <50>;
             key-positions = <6 7>;
+            bindings = <&mau_word 3>;
+        };
+
+        combo_nav {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
             bindings = <&nav_word 1>;
         };
 
-        combo_mau {
+        combo_num {
             timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&mau_word 3>;
+            key-positions = <28 29>;
+            bindings = <&num_word 2>;
+        };
+
+        combo_maius {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&caps_word>;
         };
     };
 };
@@ -127,7 +155,7 @@
 &kp C_VOL_UP  &kp Q     &kp  W    &kp E     &kp  R    &kp  T                                                                                                 &kp  Y      &kp U       &kp I       &kp  O        &mt SEMI  COLON    &kp  C_PP
 &kp C_VOL_DN  &kp  A    &kp  S    &kp  D    &kp  F    &kp  G                                                                                                 &kp  H      &mt LPAR J  &mt RPAR K  &kp  L        &kp  P             &kp  C_MUTE
 &kp LALT      &kp  Z    &kp  X    &kp  C    &kp  V    &kp  B        &kp  ESC                                                                     &kp Undo    &kp  N      &kp M       &kp COMMA   &kp  DOT      &mt QMARK  EXCL    &kp  PSCRN
-                                            &kp LGUI  &sk  LCTRL    &num_word 2   &sk  LSHIFT                      &mt DOUBLE_QUOTES APOSTROPHE  &caps_word  &kp TAB     &kp  EQUAL   
+                                            &kp LGUI  &sk  LCTRL    &sym_word 4   &sk  LSHIFT                      &mt DOUBLE_QUOTES APOSTROPHE  &caps_word  &kp TAB     &kp  EQUAL   
            >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -145,11 +173,11 @@
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
        };
 
-        sym_layer {
-            display-name = "num simb";
+        num_layer {
+            display-name = "numeri";
             bindings = <
-&trans     &kp  ASTRK    &kp  KP_N7    &kp  KP_N8    &kp  KP_N9   &kp  SLASH                                                                  &kp  LBKT  &kp  RBKT   &kp  LBRC   &kp  RBRC    &Passpc       &Passfirma
-&trans     &kp  PLUS     &kp  KP_N4    &kp  KP_N5    &kp  KP_N6   &kp  MINUS                                                                  &kp  BSLH  &kp  AT     &kp  F4     &kp  DLLR    &kp  POUND    &kp AMPERSAND
+&trans     &kp  ASTRK    &kp  KP_N7    &kp  KP_N8    &kp  KP_N9   &kp  SLASH                                                                  &trans  &trans   &trans   &trans    &trans       &trans
+&trans     &kp  PLUS     &kp  KP_N4    &kp  KP_N5    &kp  KP_N6   &kp  MINUS                                                                  &trans  &trans     &trans     &trans   &trans    &trans
 &trans     &kp  PRCNT    &kp  KP_N1    &kp  KP_N2    &kp  KP_N3   &kp  UNDER     &trans                                           &trans      &trans     &trans      &trans      &trans       &trans        &trans 
                                                      &kp COMMA    &kp KP_N0      &trans   &kp ENTER                     &trans     &trans     &trans     &trans
            >;
@@ -168,5 +196,18 @@
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
        };
+
+
+        sym_layer {
+            display-name = "simbol";
+            bindings = <
+&trans     &trans    &trans    &trans    &trans   &trans                                                                  &kp  LBKT  &kp  RBKT   &kp  LBRC   &kp  RBRC    &Passpc       &Passfirma
+&trans     &trans    &trans    &trans    &trans   &trans                                                                  &kp  BSLH  &kp  AT     &kp  F4     &kp  DLLR    &kp  POUND    &kp AMPERSAND
+&trans     &trans    &trans    &trans    &trans   &trans     &trans                                           &trans      &trans     &trans      &trans      &trans       &trans        &trans 
+                                         &trans   &trans     &trans   &trans                       &trans     &trans      &trans     &trans
+           >;
+
+                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
     };
 }; 
