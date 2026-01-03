@@ -63,7 +63,7 @@
                 <&macro_release &Passfirma>;
         };
 
-        sel : sel {
+        sel: sel {
             label = "sel";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -75,7 +75,7 @@
                 <&macro_release &kp LSHIFT &kp LCTRL &kp LEFT>;
         };
 
-        cadxsx : cadxsx {
+        cadxsx: cadxsx {
             label = "cadxsx";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
