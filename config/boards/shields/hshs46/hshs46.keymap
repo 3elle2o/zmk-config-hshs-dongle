@@ -103,7 +103,7 @@
 
         combo_num {
             timeout-ms = <50>;
-            key-positions = <16 17>;
+            key-positions = <14 15>;
             bindings = <&num_word 2>;
         };
 
@@ -121,7 +121,7 @@
 
         combo_mau {
             timeout-ms = <50>;
-            key-positions = <6 7>;
+            key-positions = <20 21>;
             bindings = <&mau_word 3>;
         };
 
