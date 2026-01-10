@@ -146,10 +146,10 @@
         Base {
             display-name = "Base";
             bindings = <
-&kp C_VOL_UP  &kp Q     &kp  W    &kp E     &kp  R      &kp  T                                                                                                                  &kp  Y        &kp U       &kp I       &kp  O        &mt SEMI  COLON    &kp  C_PP
-&kp C_VOL_DN  &kp  A    &kp  S    &kp  D    &kp  F      &kp  G                                                                                                                  &kp  H        &mt LPAR J  &mt RPAR K  &kp  L        &kp  P             &kp  C_MUTE
-&kp C_AL_CALC &kp  Z    &kp  X    &kp  C    &kp  V      &kp  B     &mau_word 3                                                                     &nav_word 1                    &kp  N        &kp M       &kp COMMA   &kp  DOT      &mt QMARK  EXCL    &kp  PSCRN
-                                            &kp LGUI    &sk LCTRL  &sk LSHIFT    &num_word 2                                     &caps_word    &mt DOUBLE_QUOTES APOSTROPHE     &sym_word 4   &kp LALT   
+&kp C_VOL_UP  &kp Q     &kp  W    &kp E     &kp  R        &kp  T                                                                                             &kp  Y        &kp U       &kp I       &kp  O        &mt SEMI  COLON   &kp  C_PP
+&mau_word 3   &kp  A    &kp  S    &kp  D    &kp  F        &kp  G                                                                                             &kp  H        &mt LPAR J  &mt RPAR K  &kp  L        &kp  P            &nav_word 1   
+&kp C_VOL_DN  &kp  Z    &kp  X    &kp  C    &kp  V        &kp  B     &kp C_AL_CALC                                          &kp  PSCRN                       &kp  N        &kp M       &kp COMMA   &kp  DOT    &mt QMARK  EXCL     &kp  C_MUTE                      
+                                            &kp LGUI      &sk LCTRL  &sk LSHIFT    &num_word 2                &caps_word    &mt DOUBLE_QUOTES APOSTROPHE     &sym_word 4   &kp LALT  
            >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
        };
