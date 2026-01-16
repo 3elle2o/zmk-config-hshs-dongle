@@ -221,7 +221,7 @@
             display-name = "italia";
             bindings = <
 &trans     &trans    &trans    &mt IT_E_GRAVE IT_E_ACUTE   &trans   &trans                                                                  &trans  &kp  IT_U_GRAVE  &kp IT_I_GRAVE   &kp  IT_O_GRAVE    &trans       &trans
-&trans     &kp IT_A_GRAVE    &trans    &trans    &trans   &trans                                                                  &&trans  &kp IT_SINGLE_QUOTE &kp IT_DOUBLE_QUOTES     &trans    &trans    &trans
+&trans     &kp IT_A_GRAVE    &trans    &trans    &trans   &trans                                                                  &trans  &kp IT_SINGLE_QUOTE &kp IT_DOUBLE_QUOTES     &trans    &trans    &trans
 &trans     &trans    &trans    &trans    &trans   &trans     &trans                                           &trans      &trans     &trans &trans      &trans       &trans        &trans 
                                          &trans   &trans     &trans   &trans                       &trans     &trans      &trans     &trans
            >;
