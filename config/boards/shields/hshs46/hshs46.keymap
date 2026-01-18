@@ -19,11 +19,6 @@
 
 #include <dt-bindings/zmk/pointing.h>
 
-#define A_ACUTO &kp LALT &kp A
-#define E_ACUTO &kp LALT &kp E
-#define U_ACUTO &kp LALT &kp U
-#define I_ACUTO &kp LALT &kp I
-#define O_ACUTO &kp LALT &kp O
 
 &num_word {
   continue-list = <LPAR RPAR EQUAL SLASH MINUS ASTRK PLUS PRCNT COMMA DOT>;
