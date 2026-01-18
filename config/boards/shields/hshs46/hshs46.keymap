@@ -146,18 +146,6 @@
   };
 };
 
-
-/ {
-  behaviors {
-    ita_word: ita_word {
-      compatible = "zmk,behavior-auto-layer";
-      #binding-cells = <1>;
-        continue-list = <IT_A IT_E IT_U IT_I IT_O IT_Q IT_DQ>;
-      ignore-modifiers;
-    };
-  };
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -221,7 +209,7 @@
 &none   &none    &kp  W    &kp E     &kp  R        &kp  T                                                                        &kp  Y        &kp U       &kp I       &kp  O     &none         &none 
 &kp Q   &kp  A   &kp  S    &kp  D    &kp  F        &kp  G                                                                        &kp  H        &mt LPAR J  &mt RPAR K  &kp  L     &kp  P        &nav_word 1   
 &none   &kp  Z   &kp  X    &kp  C    &kp  V        &kp  B     &kp C_AL_CALC                                      &kp  PSCRN      &kp  N        &kp M       &kp COMMA   &kp  DOT   &mau_word 3   &none           
-                                     &kp LGUI      &sk LCTRL  &sk LSHIFT    &num_word 2            &caps_word    &ita_word 5     &sym_word 4   &kp LALT  
+                                     &kp LGUI      &sk LCTRL  &sk LSHIFT    &num_word 2            &caps_word    &mo 5     &sym_word 4   &kp LALT  
            >;
                        
        };
