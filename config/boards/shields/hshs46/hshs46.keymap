@@ -52,6 +52,64 @@
 };
 
 / {
+    macros {
+        // Macro per la 'è' (accento grave): preme l'accento e poi la 'e'
+        it_e_grave: it_e_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp E>;
+        };
+
+        };
+
+        // Macro per la 'à'
+        it_a_grave: it_a_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp A>;
+        };
+
+        // Macro per la 'à'
+        it_u_grave: it_u_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp U>;
+        };
+        // Aggiungi qui altre vocali seguendo lo stesso schema
+
+        // Macro per la 'à'
+        it_i_grave: it_i_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp I>;
+        };
+
+        // Macro per la 'à'
+        it_o_grave: it_o_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp O>;
+        };
+
+        // Macro per la 'à'
+        it_quote_grave: it_quote_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp APOS>;
+        };
+
+        // Macro per la 'à'
+        it_dquote_grave: it_dquote_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp DQT>;
+        };
+
+    };
+};
+
+
+/ {
   behaviors {
     nav_word: nav_word {
       compatible = "zmk,behavior-auto-layer";
@@ -90,7 +148,7 @@
     ita_word: ita_word {
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
-        continue-list = <A_ACUTO E_ACUTO U_ACUTO I_ACUTO O_ACUTO APOS DQT>;
+        continue-list = <it_a_grave it_e_grave it_u_grave it_i_grave it_o_grave it_quote_grave it_dquote_grave>;
       ignore-modifiers;
     };
   };
@@ -216,8 +274,8 @@
         italia_layer {
             display-name = "italia";
             bindings = <
-&trans     &trans            &trans    &kp E_ACUTO    &trans   &trans                                                                           &trans     &kp U_ACUTO        &kp I_ACUTO    &kp O_ACUTO     &none    &none
-&trans     &kp A_ACUTO     &trans    &trans                      &trans   &trans                                                                &trans     &kp APOS      &kp DQT    &trans  trans    &trans
+&trans     &trans            &trans    &it_e_grave    &trans   &trans                                                                           &trans     &it_u_grave        &it_i_grave    &it_o_grave     &none    &none
+&trans     &it_a_grave     &trans    &trans                      &trans   &trans                                                                &trans     &it_quote_grave      &it_dquote_grave    &trans  trans    &trans
 &trans     &trans            &trans    &trans                      &trans   &trans     &trans                                           &trans     &trans     &trans   &trans  &trans   &trans &none
                                                                    &trans   &trans     &trans   &trans                       &trans     &trans     &trans     &trans
            >;
