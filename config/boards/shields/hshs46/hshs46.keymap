@@ -58,6 +58,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp E>;
+            label = "it_e_grave";
         };
 
         // Macro per la 'à'
@@ -65,6 +66,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp A>;
+            label = "it_a_grave";
         };
 
         // Macro per la 'à'
@@ -72,6 +74,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp U>;
+            label = "it_u_grave";
         };
         // Aggiungi qui altre vocali seguendo lo stesso schema
 
@@ -80,6 +83,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp I>;
+            label = "it_i_grave";
         };
 
         // Macro per la 'à'
@@ -87,6 +91,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp O>;
+            label = "it_o_grave";
         };
 
         // Macro per la 'à'
@@ -94,6 +99,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp APOS>;
+            label = "it_quote_grave";
         };
 
         // Macro per la 'à'
@@ -101,6 +107,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp DQT>;
+            label = "it_dquote_grave";
         };
     };
 };
