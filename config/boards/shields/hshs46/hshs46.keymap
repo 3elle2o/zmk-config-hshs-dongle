@@ -11,6 +11,7 @@
 #include <dt-bindings/zmk/behaviors.h>
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi>
+#include <behaviors/num_word.dtsi>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000 
 
@@ -54,36 +55,6 @@
 };
 
 / {
-    macros {
-        // Macro Minuscole
-        m_a_gr: m_a_gr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp GRAVE &kp A>; };
-        m_e_gr: m_e_gr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp GRAVE &kp E>; };
-        m_i_gr: m_i_gr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp GRAVE &kp I>; };
-        m_o_gr: m_o_gr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp GRAVE &kp O>; };
-        m_u_gr: m_u_gr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp GRAVE &kp U>; };
-        m_e_ac: m_e_ac { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp SQT &kp E>; };
-
-        // Macro Maiuscole
-        m_A_gr: m_A_gr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp GRAVE &kp LS(A)>; };
-        m_E_gr: m_E_gr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp GRAVE &kp LS(E)>; };
-        m_I_gr: m_I_gr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp GRAVE &kp LS(I)>; };
-        m_O_gr: m_O_gr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp GRAVE &kp LS(O)>; };
-        m_U_gr: m_U_gr { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp GRAVE &kp LS(U)>; };
-        m_E_ac: m_E_ac { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>; bindings = <&kp SQT &kp LS(E)>; };
-    };
-};
-
-/ {
-    macros {
-        // Macro Accenti
-        m_apo: m_apo { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>;
-            bindings = <&kp SQT &kp SPC>; };
-        m_dqu: m_dqu { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <10>;
-            bindings = <&kp LS(SQT) &kp SPC>; };
-    };
-};
-
-/ {
   behaviors {
     nav_word: nav_word {
       compatible = "zmk,behavior-auto-layer";
@@ -116,23 +87,13 @@
   };
 };
 
-/ {
-    behaviors {
-        à_À: a_morph { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&m_a_gr>, <&m_A_gr>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        è_È: e_morph { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&m_e_gr>, <&m_E_gr>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        ì_Ì: i_morph { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&m_i_gr>, <&m_I_gr>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        ò_Ò: o_morph { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&m_o_gr>, <&m_O_gr>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        ù_Ù: u_morph { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&m_u_gr>, <&m_U_gr>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        é_É: ee_morph { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&m_e_ac>, <&m_E_ac>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-    };
-};
 
 / {
   behaviors {
     ita_word: ita_word {
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
-        continue-list = <m_a_gr m_e_gr m_i_gr m_o_gr m_u_gr m_apo m_dqu>;
+        continue-list = < >;
       ignore-modifiers;
     };
   };
