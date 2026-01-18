@@ -12,23 +12,18 @@
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi>
 #include <behaviors/num_word.dtsi>
-#include "keys_it.h"
-#include "keys_it_142.h"
+
+
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000 
 
 #include <dt-bindings/zmk/pointing.h>
 
-#define QWERTY_L 0
-#define NAV_L    1
-#define SYM_L    2
-#define MAU_L    3
-
-#define Undo   LC(Z)
-#define Cut    LC(X)
-#define Copy   LC(C)
-#define Paste  LC(V)
-#define Redo   LC(Y)
+#define A_ACUTO &kp LALT &kp A
+#define E_ACUTO &kp LALT &kp E
+#define U_ACUTO &kp LALT &kp U
+#define I_ACUTO &kp LALT &kp I
+#define O_ACUTO &kp LALT &kp O
 
 &num_word {
   continue-list = <LPAR RPAR EQUAL SLASH MINUS ASTRK PLUS PRCNT COMMA DOT>;
@@ -95,7 +90,7 @@
     ita_word: ita_word {
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
-        continue-list = <IT_DQT IT_SQT IT_A_GRAVE IT_E_GRAVE IT_I_GRAVE IT_O_GRAVE IT_U_GRAVE IT_EURO>;
+        continue-list = <A_ACUTO E_ACUTO U_ACUTO I_ACUTO O_ACUTO APOS DQT>;
       ignore-modifiers;
     };
   };
@@ -221,8 +216,8 @@
         italia_layer {
             display-name = "italia";
             bindings = <
-&trans     &trans            &trans    &kp IT_E_GRAVE    &trans   &trans                                                                           &trans     &kp IT_U_GRAVE        &kp IT_I_GRAVE     &kp IT_O_GRAVE     &none    &none
-&trans     &kp IT_A_GRAVE     &trans    &trans                      &trans   &trans                                                                &trans     &kp IT_SQT      &kp IT_DQT    &trans  trans    &trans
+&trans     &trans            &trans    &kp E_ACUTO    &trans   &trans                                                                           &trans     &kp U_ACUTO        &kp I_ACUTO    &kp O_ACUTO     &none    &none
+&trans     &kp A_ACUTO     &trans    &trans                      &trans   &trans                                                                &trans     &kp APOS      &kp DQT    &trans  trans    &trans
 &trans     &trans            &trans    &trans                      &trans   &trans     &trans                                           &trans     &trans     &trans   &trans  &trans   &trans &none
                                                                    &trans   &trans     &trans   &trans                       &trans     &trans     &trans     &trans
            >;
