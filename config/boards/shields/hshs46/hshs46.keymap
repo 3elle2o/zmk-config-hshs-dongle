@@ -12,8 +12,8 @@
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi>
 #include <behaviors/num_word.dtsi>
-#include <keys_it.h>
-#include <keys_it_142.h>
+#include "keys_it.h"
+#include "keys_it_142.h"
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000 
 
