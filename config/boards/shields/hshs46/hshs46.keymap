@@ -43,11 +43,7 @@
             bindings = <&kp N7 &kp N3 &kp N0 &kp N0 &kp N2 &kp N0 &kp N9 &kp N9>;
             label = "PASSFIRMA";
         };
-    };
-};
-
-/ {
-    macros {
+  
         // Macro per la 'è' (accento grave): preme l'accento e poi la 'e'
         it_e_grave: it_e_grave {
             compatible = "zmk,behavior-macro";
