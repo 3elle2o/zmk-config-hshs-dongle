@@ -186,7 +186,7 @@
             bindings = <
 &none       &none         &kp  KP_N7    &kp  KP_N8    &kp  KP_N9   &kp  SLASH                                                                  &trans    &trans   &trans   &trans   &none     &none
 &kp  ASTRK  &kp  PLUS     &kp  KP_N4    &kp  KP_N5    &kp  KP_N6   &kp  MINUS                                                                  &trans    &trans   &trans   &trans   &trans    &trans
-&none       &kp  PRCNT    &kp  KP_N1    &kp  KP_N2    &kp  KP_N3   &kp  UNDER     &kp  EQUAL trans                                           &trans      &trans    &trans   &trans   &trans   &trans    &none  
+&none       &kp  PRCNT    &kp  KP_N1    &kp  KP_N2    &kp  KP_N3   &kp  UNDER     &kp  EQUAL                                            &trans      &trans    &trans   &trans   &trans   &trans    &none  
                                                      &kp  EQUAL   &kp ENTER      &kp COMMA    &kp KP_N0                &trans     &trans     &trans     &trans
            >;
 
