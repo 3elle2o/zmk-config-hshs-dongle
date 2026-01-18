@@ -60,8 +60,6 @@
             bindings = <&kp GRAVE &kp E>;
         };
 
-        };
-
         // Macro per la 'à'
         it_a_grave: it_a_grave {
             compatible = "zmk,behavior-macro";
@@ -104,7 +102,6 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp DQT>;
         };
-
     };
 };
 
