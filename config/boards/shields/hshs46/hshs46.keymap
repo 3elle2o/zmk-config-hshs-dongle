@@ -221,8 +221,8 @@
         italia_layer {
             display-name = "italia";
             bindings = <
-&trans     &trans            &trans    &IT_E_GRAVE    &trans   &trans                                                                           &trans     &IT_U_GRAVE        &IT_I_GRAVE     &IT_O_GRAVE     &none    &none
-&trans     &IT_A_GRAVE     &trans    &trans                      &trans   &trans                                                                &trans     &IT_SQT      &IT_DQT    &trans  trans    &trans
+&trans     &trans            &trans    &kp IT_E_GRAVE    &trans   &trans                                                                           &trans     &kp IT_U_GRAVE        &kp IT_I_GRAVE     &kp IT_O_GRAVE     &none    &none
+&trans     &kp IT_A_GRAVE     &trans    &trans                      &trans   &trans                                                                &trans     &kp IT_SQT      &kp IT_DQT    &trans  trans    &trans
 &trans     &trans            &trans    &trans                      &trans   &trans     &trans                                           &trans     &trans     &trans   &trans  &trans   &none
                                                                    &trans   &trans     &trans   &trans                       &trans     &trans     &trans     &trans
            >;
