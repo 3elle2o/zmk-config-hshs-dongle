@@ -12,6 +12,7 @@
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi>
 #include <behaviors/num_word.dtsi>
+#include <behaviors/num_word.dtsi>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000 
 
@@ -93,7 +94,7 @@
     ita_word: ita_word {
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
-        continue-list = < >;
+        continue-list = <IT_DQT IT_SQT IT_A_GRAVE IT_E_GRAVE IT_I_GRAVE IT_O_GRAVE IT_U_GRAVE IT_EURO>;
       ignore-modifiers;
     };
   };
@@ -219,8 +220,8 @@
         italia_layer {
             display-name = "italia";
             bindings = <
-&trans     &trans            &trans    &è_È   &trans   &trans                                                                           &trans     &ù_Ù       &ì_Ì     &ò_Ò    &none    &none
-&trans     &à_À    &trans    &trans                      &trans   &trans                                                                &trans     &m_apo     &m_dqu   &trans  trans    &trans
+&trans     &trans            &trans    &IT_E_GRAVE    &trans   &trans                                                                           &trans     &IT_U_GRAVE        &IT_I_GRAVE     &IT_O_GRAVE     &none    &none
+&trans     &IT_A_GRAVE     &trans    &trans                      &trans   &trans                                                                &trans     &IT_SQT      &IT_DQT    &trans  trans    &trans
 &trans     &trans            &trans    &trans                      &trans   &trans     &trans                                           &trans     &trans     &trans   &trans  &trans   &none
                                                                    &trans   &trans     &trans   &trans                       &trans     &trans     &trans     &trans
            >;
