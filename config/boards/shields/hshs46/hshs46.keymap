@@ -110,7 +110,7 @@
     sym_word: sym_word {
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
-        continue-list = <LBKT RBKT LBRC RBRC BSLH AT IT_EURO DLLR POUND AMPERSAND>;
+        continue-list = <LBKT RBKT LBRC RBRC BSLH AT DLLR POUND AMPERSAND>;
       ignore-modifiers;
     };
   };
@@ -247,7 +247,7 @@
             display-name = "simmedia";
             bindings = <
 &trans     &trans        &trans         &trans       &trans      &trans                                                                  &kp  LBKT  &kp  RBKT   &kp  LBRC         &kp  RBRC          &none        &none
-&trans     &kp C_VOL_DN  &kp C_VOL_UP   &kp  C_MUTE  &kp  C_PP   &trans                                                                  &kp  BSLH  &kp  AT     &kp  IT_EURO      &kp  DLLR          &kp  POUND    &kp AMPERSAND
+&trans     &kp C_VOL_DN  &kp C_VOL_UP   &kp  C_MUTE  &kp  C_PP   &trans                                                                  &kp  BSLH  &kp  AT     &kp  F4           &kp  DLLR          &kp  POUND    &kp AMPERSAND
 &trans     &trans        &trans         &trans       &trans      &trans     &trans                                           &trans      &Passpc    &Passfirma  &mt QMARK  EXCL   &mt SEMI  COLON    &trans        &none 
                                                      &trans      &trans     &trans   &trans                       &trans     &trans      &trans     &trans
            >;
