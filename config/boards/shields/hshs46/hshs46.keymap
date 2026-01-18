@@ -262,9 +262,9 @@
             display-name = "italia";
             bindings = <
 &trans     &trans            &trans    &ITE    &trans   &trans                                                                           &trans     &ITU        &ITI    &ITO     &none    &none
-&trans     &ITA     &trans    &trans                      &trans   &trans                                                                &trans     &ITQ      &ITDQ    &trans  trans    &trans
-&trans     &trans            &trans    &trans                      &trans   &trans     &trans                                           &trans     &trans     &trans   &trans  &trans   &trans &none
-                                                                   &trans   &trans     &trans   &trans                       &trans     &trans     &trans     &trans
+&trans     &ITA              &trans    &trans   &trans   &trans                                                                         &trans     &ITQ      &ITDQ    &trans  &trans    &trans
+&trans     &trans            &trans    &trans   &trans   &trans     &trans                                                    &trans     &trans     &trans   &trans  &trans   &trans   q&none
+                                                                   &trans   &trans     &trans   &trans             &trans     &trans     &trans     &trans
            >;
 
                         
