@@ -66,7 +66,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp A>;
-            label = "IT_A";
+            label = "ITA";
         };
 
         // Macro per la 'à'
@@ -74,7 +74,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp U>;
-            label = "IT_U";
+            label = "ITU";
         };
         // Aggiungi qui altre vocali seguendo lo stesso schema
 
@@ -83,7 +83,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp I>;
-            label = "IT_I";
+            label = "ITI";
         };
 
         // Macro per la 'à'
@@ -91,7 +91,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp O>;
-            label = "IT_O";
+            label = "ITO";
         };
 
         // Macro per la 'à'
@@ -99,7 +99,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp APOS>;
-            label = "IT_Q";
+            label = "ITQ";
         };
 
         // Macro per la 'à'
@@ -107,7 +107,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp DQT>;
-            label = "IT_DQ";
+            label = "ITDQ";
         };
     };
 };
@@ -266,8 +266,8 @@
         italia_layer {
             display-name = "italia";
             bindings = <
-&trans     &trans            &trans    &IT_E    &trans   &trans                                                                           &trans     &IT_U        &IT_I    &IT_O     &none    &none
-&trans     &IT_A     &trans    &trans                      &trans   &trans                                                                &trans     &IT_Q      &IT_DQ    &trans  trans    &trans
+&trans     &trans            &trans    &ITE    &trans   &trans                                                                           &trans     &ITU        &ITI    &ITO     &none    &none
+&trans     &ITA     &trans    &trans                      &trans   &trans                                                                &trans     &ITQ      &ITDQ    &trans  trans    &trans
 &trans     &trans            &trans    &trans                      &trans   &trans     &trans                                           &trans     &trans     &trans   &trans  &trans   &trans &none
                                                                    &trans   &trans     &trans   &trans                       &trans     &trans     &trans     &trans
            >;
