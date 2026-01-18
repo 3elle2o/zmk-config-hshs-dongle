@@ -58,7 +58,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp E>;
-            label = "it_e_grave";
+            label = "IT_E";
         };
 
         // Macro per la 'à'
@@ -66,7 +66,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp A>;
-            label = "it_a_grave";
+            label = "IT_A";
         };
 
         // Macro per la 'à'
@@ -74,7 +74,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp U>;
-            label = "it_u_grave";
+            label = "IT_U";
         };
         // Aggiungi qui altre vocali seguendo lo stesso schema
 
@@ -83,7 +83,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp I>;
-            label = "it_i_grave";
+            label = "IT_I";
         };
 
         // Macro per la 'à'
@@ -91,7 +91,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp O>;
-            label = "it_o_grave";
+            label = "IT_O";
         };
 
         // Macro per la 'à'
@@ -99,7 +99,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp APOS>;
-            label = "it_quote_grave";
+            label = "IT_Q";
         };
 
         // Macro per la 'à'
@@ -107,7 +107,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp DQT>;
-            label = "it_dquote_grave";
+            label = "IT_DQ";
         };
     };
 };
@@ -152,7 +152,7 @@
     ita_word: ita_word {
       compatible = "zmk,behavior-auto-layer";
       #binding-cells = <1>;
-        continue-list = <it_a_grave it_e_grave it_u_grave it_i_grave it_o_grave it_quote_grave it_dquote_grave>;
+        continue-list = <IT_A IT_E IT_U IT_I IT_O IT_Q IT_DQ>;
       ignore-modifiers;
     };
   };
@@ -278,8 +278,8 @@
         italia_layer {
             display-name = "italia";
             bindings = <
-&trans     &trans            &trans    &it_e_grave    &trans   &trans                                                                           &trans     &it_u_grave        &it_i_grave    &it_o_grave     &none    &none
-&trans     &it_a_grave     &trans    &trans                      &trans   &trans                                                                &trans     &it_quote_grave      &it_dquote_grave    &trans  trans    &trans
+&trans     &trans            &trans    &IT_E    &trans   &trans                                                                           &trans     &IT_U        &IT_I    &IT_O     &none    &none
+&trans     &IT_A     &trans    &trans                      &trans   &trans                                                                &trans     &IT_Q      &IT_DQ    &trans  trans    &trans
 &trans     &trans            &trans    &trans                      &trans   &trans     &trans                                           &trans     &trans     &trans   &trans  &trans   &trans &none
                                                                    &trans   &trans     &trans   &trans                       &trans     &trans     &trans     &trans
            >;
