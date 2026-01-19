@@ -43,63 +43,6 @@
             bindings = <&kp N7 &kp N3 &kp N0 &kp N0 &kp N2 &kp N0 &kp N9 &kp N9>;
             label = "PASSFIRMA";
         };
-  
-        // Macro per la 'è' (accento grave): preme l'accento e poi la 'e'
-        it_e_grave: it_e_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp E>;
-            label = "ITE";
-        };
-
-        // Macro per la 'à'
-        it_a_grave: it_a_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp A>;
-            label = "ITA";
-        };
-
-        // Macro per la 'à'
-        it_u_grave: it_u_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp U>;
-            label = "ITU";
-        };
-        // Aggiungi qui altre vocali seguendo lo stesso schema
-
-        // Macro per la 'à'
-        it_i_grave: it_i_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp I>;
-            label = "ITI";
-        };
-
-        // Macro per la 'à'
-        it_o_grave: it_o_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp O>;
-            label = "ITO";
-        };
-
-        // Macro per la 'à'
-        it_quote_grave: it_quote_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp APOS>;
-            label = "ITQ";
-        };
-
-        // Macro per la 'à'
-        it_dquote_grave: it_dquote_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp DQT>;
-            label = "ITDQ";
-        };
     };
 };
 
@@ -179,13 +122,13 @@
         combo_maus {
             timeout-ms = <50>;
             key-positions = <32 33>;
-            bindings = <&kp C_AC_REDO>;
+            bindings = <&kp DQT>;
         };
 
         combo_nav {
             timeout-ms = <50>;
             key-positions = <18 19>;
-            bindings = <&kp C_AC_UNDO>;
+            bindings = <&kp SQT>;
         };
     };
 };
@@ -199,8 +142,8 @@
             bindings = <           
 &none   &none    &kp  W    &kp E     &kp  R        &kp  T                                                                        &kp  Y        &kp U       &kp I       &kp  O     &none         &none 
 &kp Q   &kp  A   &kp  S    &kp  D    &kp  F        &kp  G                                                                        &kp  H        &mt LPAR J  &mt RPAR K  &kp  L     &kp  P        &nav_word 1   
-&none   &kp  Z   &kp  X    &kp  C    &kp  V        &kp  B     &kp C_AL_CALC                                      &kp  PSCRN      &kp  N        &kp M       &kp COMMA   &kp  DOT   &mau_word 3   &none           
-                                     &kp LGUI      &sk LCTRL  &sk LSHIFT    &num_word 2            &caps_word    &mo 5     &sym_word 4   &kp LALT  
+&none   &kp  Z   &kp  X    &kp  C    &kp  V        &kp  B     &none                                              &none           &kp  N        &kp M       &kp COMMA   &kp  DOT   &mau_word 3   &none           
+                                     &kp LGUI      &sk LCTRL  &sk LSHIFT    &num_word 2            &caps_word    &sk GRAVE       &sym_word 4   &kp LALT  
            >;
                        
        };
@@ -222,8 +165,8 @@
             bindings = <
 &none       &none         &kp  KP_N7    &kp  KP_N8    &kp  KP_N9   &kp  SLASH                                                                  &trans    &trans   &trans   &trans   &none     &none
 &kp  ASTRK  &kp  PLUS     &kp  KP_N4    &kp  KP_N5    &kp  KP_N6   &kp  MINUS                                                                  &trans    &trans   &trans   &trans   &trans    &trans
-&none       &kp  PRCNT    &kp  KP_N1    &kp  KP_N2    &kp  KP_N3   &kp  UNDER     &kp  EQUAL                                            &trans      &trans    &trans   &trans   &trans   &trans    &none  
-                                                     &kp  EQUAL   &kp ENTER      &kp COMMA    &kp KP_N0                &trans     &trans     &trans     &trans
+&none       &kp  PRCNT    &kp  KP_N1    &kp  KP_N2    &kp  KP_N3   &kp  UNDER     &kp  EQUAL                                            &trans     &trans    &trans   &trans   &trans   &trans    &none  
+                                                      &kp  EQUAL   &kp ENTER      &kp COMMA    &kp KP_N0                     &trans     &trans     &trans    &trans
            >;
 
                         
@@ -247,7 +190,7 @@
             bindings = <
 &trans     &trans        &trans         &trans       &trans      &trans                                                                  &kp  LBKT  &kp  RBKT   &kp  LBRC         &kp  RBRC          &none        &none
 &trans     &kp C_VOL_DN  &kp C_VOL_UP   &kp  C_MUTE  &kp  C_PP   &trans                                                                  &kp  BSLH  &kp  AT     &kp  F4           &kp  DLLR          &kp  POUND    &kp AMPERSAND
-&trans     &trans        &trans         &trans       &trans      &trans     &trans                                           &trans      &Passpc    &Passfirma  &mt QMARK  EXCL   &mt SEMI  COLON    &trans        &none 
+&trans     &trans        &trans         &trans       &trans      &trans     &trans                                           &trans      &Passpc    &Passfirma  &mt QMARK  EXCL   &mt SEMI  COLON    &kp  PSCRN        &none 
                                                      &trans      &trans     &trans   &trans                       &trans     &trans      &trans     &trans
            >;
 
