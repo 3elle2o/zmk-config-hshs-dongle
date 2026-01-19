@@ -143,7 +143,7 @@
 &none   &none    &kp  W    &kp E     &kp  R        &kp  T                                                                        &kp  Y        &kp U       &kp I       &kp  O     &none         &none 
 &kp Q   &kp  A   &kp  S    &kp  D    &kp  F        &kp  G                                                                        &kp  H        &mt LPAR J  &mt RPAR K  &kp  L     &kp  P        &nav_word 1   
 &none   &kp  Z   &kp  X    &kp  C    &kp  V        &kp  B     &none                                              &none           &kp  N        &kp M       &kp COMMA   &kp  DOT   &mau_word 3   &none           
-                                     &kp LGUI      &sk LCTRL  &sk LSHIFT    &num_word 2            &caps_word    &sk GRAVE       &sym_word 4   &kp LALT  
+                                     &kp LGUI      &sk LCTRL  &num_word 2  &sk LSHIFT                &sk GRAVE   &caps_word      &sym_word 4   &kp LALT  
            >;
                        
        };
@@ -195,18 +195,6 @@
            >;
 
                           
-        };
-
-        italia_layer {
-            display-name = "italia";
-            bindings = <
-&trans     &trans            &trans    &ITE    &trans   &trans                                                                           &trans     &ITU        &ITI    &ITO     &none    &none
-&trans     &ITA              &trans    &trans   &trans   &trans                                                                         &trans     &ITQ      &ITDQ    &trans  &trans    &trans
-&trans     &trans            &trans    &trans   &trans   &trans     &trans                                                    &trans     &trans     &trans   &trans  &trans   &trans   &none
-                                                                   &trans   &trans     &trans   &trans             &trans     &trans     &trans     &trans
-           >;
-
-                        
         };
     };
 }; 
