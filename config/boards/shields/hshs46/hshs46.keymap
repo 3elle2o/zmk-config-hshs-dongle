@@ -21,7 +21,7 @@
 
 
 &num_word {
-  continue-list = <LPAR RPAR EQUAL SLASH MINUS ASTRK PLUS PRCNT COMMA DOT>;
+  continue-list = <LPAR RPAR EQUAL SLASH MINUS ASTRK PLUS PRCNT COMMA DOT BSPC>;
 };
 
 &mt {
