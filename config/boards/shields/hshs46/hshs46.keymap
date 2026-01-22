@@ -139,7 +139,40 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&caps_word>, <&nav_word 1>;
+            bindings = <&sym_word 4>, <&nav_word 1>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LSHIFT>, <&caps_word>;  
+        };
+    };
+};
+
+/ {
+    behaviors {
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LCTRL>, <&num_word 2>;  
+        };
+    };
+};
+
+/ {
+    behaviors {
+        td3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp GRAVE>, <&mau_word 3>;  
         };
     };
 };
@@ -154,7 +187,7 @@
 &none   &kp Q    &kp  W    &kp E     &kp  R        &kp  T                                                                        &kp  Y        &kp U       &kp I       &kp  O    &kp LALT      &none       
 &none   &kp  A   &kp  S    &kp  D    &kp  F        &kp  G                                                                        &kp  H        &mt LPAR J  &mt RPAR K  &kp  L     &kp  P        &none   
 &none   &kp  Z   &kp  X    &kp  C    &kp  V        &kp  B     &none                                              &none           &kp  N        &kp M       &kp COMMA   &kp  DOT   &kp LGUI   &none           
-                                     &mau_word 3      &sk LCTRL  &sk LSHIFT  &num_word 2               &td0   &sk GRAVE       &sym_word 4   &nav_word 1
+                               &none      &none   &td1  &td2                                                &td0  &td3           &none   &none   
            >;
                        
        };
