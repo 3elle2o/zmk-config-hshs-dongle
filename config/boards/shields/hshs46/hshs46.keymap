@@ -233,7 +233,7 @@
             display-name = "simmedia";
             bindings = <
 &trans     &trans        &trans         &trans       &trans      &trans                                                                  &mt  LBKT  RBKT &mt LBRC RBRC   &kp EXCL    &kp  QMARK      &mt AMPERSAND BSLH &none
-&trans     &kp C_VOL_DN  &kp C_VOL_UP   &kp  C_MUTE  &kp  C_PP   &trans                                                                  &kp  Percent    &kp  AT         &kp  F4     &kp  DLLR      &kp  POUND         &none 
+&trans     &kp C_VOL_DN  &kp C_VOL_UP   &kp  C_MUTE  &kp  C_PP   &trans                                                                  &kp  PERCENT    &kp  AT         &kp  F4     &kp  DLLR      &kp  POUND         &none 
 &trans     &trans        &trans         &trans       &trans      &kp PSCRN  &trans                                           &trans      &Passpc         &Passfirma      &kp SEMI    &mt  COLON     &kp  UNDER         &none 
                                                      &trans      &trans     &trans   &trans                       &trans     &trans      &trans     &trans
            >;
