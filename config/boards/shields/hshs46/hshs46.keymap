@@ -207,10 +207,10 @@
         num_layer {
             display-name = "numeri";
             bindings = <
-&trans   &kp  ASTRK         &kp  KP_N7    &kp  KP_N8    &kp  KP_N9   &kp  SLASH                                                                  &trans    &trans   &trans   &trans   &trans     &none
-&trans  &kp  PLUS     &kp  KP_N4    &kp  KP_N5    &kp  KP_N6   &kp  MINUS                                                                  &trans    &trans   &trans   &trans   &trans        &none  
-&trans       &kp  PRCNT    &kp  KP_N1    &kp  KP_N2    &kp  KP_N3   &kp  UNDER     &kp  EQUAL                                            &trans     &trans    &trans   &trans   &trans   &trans    &trans
-                                                      &kp  EQUAL   &kp ENTER      &kp COMMA    &kp KP_N0                     &trans     &trans     &trans    &trans
+&trans   &trans    &kp  KP_N7    &kp  KP_N8    &kp  KP_N9   &mt SLASH  ASTRK                                                                    &trans    &trans   &trans   &trans   &trans   &none
+&trans   &trans    &kp  KP_N4    &kp  KP_N5    &kp  KP_N6   &mt  MINUS  PLUS                                                                    &trans    &trans   &trans   &trans   &trans    &none  
+&trans   &trans    &kp  KP_N1    &kp  KP_N2    &kp  KP_N3   &kp  EQUAL         &none                                                 &trans     &trans    &trans   &trans   &trans   &trans    &trans
+                                                   &none        &none          &kp COMMA    &kp KP_N0                     &trans     &trans     &trans    &trans
            >;
 
                         
