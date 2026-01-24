@@ -166,7 +166,7 @@
         nummau: num_mau {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mau_word 3>, <&num_word 2>;
+            bindings = <&num_word 2>, <&mau_word 3>;
             mods = <(MOD_LSFT)>;
         };
     };
@@ -178,7 +178,7 @@
         symmuo: sym_muo {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mau_word 3>, <&sym_word 4>;
+            bindings = <&sym_word 4>, <&nav_word 1>;
             mods = <(MOD_LSFT)>;
         };
     };
