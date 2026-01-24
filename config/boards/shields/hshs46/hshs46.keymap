@@ -130,6 +130,12 @@
             key-positions = <18 19>;
             bindings = <&kp SQT>;
         };
+
+        combo_nav {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp GRAVE>;
+        };
     };
 };
 
@@ -139,7 +145,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sym_word 4>, <&nav_word 1>;
+            bindings = <&sk LCTRL>, <&num_word 2>;  
         };
     };
 };
@@ -157,22 +163,23 @@
 
 / {
     behaviors {
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
+        nummau: num_mau {
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LCTRL>, <&num_word 2>;  
+            bindings = <&mau_word 3>, <&num_word 2>;
+            mods = <(MOD_LSFT)>;
         };
     };
 };
 
+
 / {
     behaviors {
-        td3: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
+        symmuo: sym_muo {
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp GRAVE>, <&mau_word 3>;  
+            bindings = <&mau_word 3>, <&sym_word 4>;
+            mods = <(MOD_LSFT)>;
         };
     };
 };
@@ -187,7 +194,7 @@
 &none   &kp Q    &kp  W    &kp E     &kp  R        &kp  T                                                                        &kp  Y        &kp U       &kp I       &kp  O     &kp LALT   &none       
 &none   &kp  A   &kp  S    &kp  D    &kp  F        &kp  G                                                                        &kp  H        &mt LPAR J  &mt RPAR K  &kp  L     &kp  P     &none   
 &none   &kp  Z   &kp  X    &kp  C    &kp  V        &kp  B     &none                                                      &none   &kp  N        &kp M       &kp COMMA   &kp  DOT   &kp LGUI   &none           
-                                     &none         &none      &td1    &td2                                         &td0  &td3    &none         &none   
+                                     &none         &none      &td1    &td0                                      &nummau  &symmuo    &none         &none   
            >;
                        
        };
