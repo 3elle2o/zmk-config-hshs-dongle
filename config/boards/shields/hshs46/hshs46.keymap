@@ -191,7 +191,7 @@
         Base {
             display-name = "Base";
             bindings = <           
-&none   &kp Q    &kp  W    &kp E     &kp  R        &kp  T                                                                        &kp  Y        &kp U       &kp I       &kp  O     &kp LALT   &none       
+&none   &kp Q    &kp  W    &kp E     &kp  R        &kp  T                                                                        &lt 1 Y       &kp U       &kp I       &kp  O     &kp LALT   &none       
 &none   &kp  A   &kp  S    &kp  D    &kp  F        &kp  G                                                                        &kp  H        &mt LPAR J  &mt RPAR K  &kp  L     &kp  P     &none   
 &none   &kp  Z   &kp  X    &kp  C    &kp  V        &kp  B     &none                                                      &none   &kp  N        &kp M       &kp COMMA   &kp  DOT   &kp LGUI   &none           
                                      &none         &none      &td1    &td0                                      &nummau  &symmuo    &none         &none   
