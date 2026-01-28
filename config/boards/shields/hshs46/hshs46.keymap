@@ -216,10 +216,10 @@
         sym_layer {
             display-name = "simmedia";
             bindings = <
-&trans     &trans        &trans         &trans       &trans      &trans                                                                  &mt  LBKT  RBKT &mt LBRC RBRC   &kp EXCL    &kp  QMARK     &mt AMPERSAND BSLH   &none
-&trans     &kp C_VOL_DN  &kp C_VOL_UP   &kp  C_MUTE  &kp  C_PP   &kp DQT                                                                 &kp  PERCENT    &kp  AT         &kp  F4     &kp  DLLR      &kp  POUND           &none 
-&trans     &trans        &trans         &trans       &trans      &kp PSCRN  &trans                                           &trans      &Passpc         &Passfirma      &kp SEMI    &kp COLON      &kp  UNDER           &none 
-                                                     &trans      &trans     &trans   &trans                       &trans     &trans      &trans          &trans
+&trans     &kp POUND     &kp DLLR        &mt AMPERSAND BSLH    &mt  LBKT  RBKT  &mt LBRC RBRC                                                  &kp SEMI        &kp COLON       &kp EXCL    &kp  QMARK    &kp  PSCRN    &none
+&trans     &kp C_VOL_DN  &kp C_VOL_UP    &kp  C_MUTE           &kp  C_PP        &trans                                                         &kp DQT         &kp  AT         &kp  F4     &kp  UNDER    &kp PERCEN    &none 
+&trans     &trans        &trans          &trans                &trans           &trans         &trans                              &trans      &Passpc         &Passfirma      &trans      &trans        &trans        &none
+                                                               &trans           &trans         &trans   &trans            &trans   &trans      &trans          &trans
            >;
 
                           
